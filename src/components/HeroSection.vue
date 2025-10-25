@@ -1,5 +1,5 @@
 <template>
-  <section class="relative flex-1 flex items-center">
+  <section class="relative flex items-center">
     <!-- Background image -->
     <div class="absolute inset-0 overflow-hidden">
       <img

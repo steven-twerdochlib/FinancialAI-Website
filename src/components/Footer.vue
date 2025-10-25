@@ -1,8 +1,6 @@
 <template>
-  <footer class="border-t border-gray-100 dark:border-gray-800">
-    <div
-      class="max-w-7xl mx-auto px-6 py-8 text-sm text-gray-600 dark:text-gray-400 flex flex-col md:flex-row justify-between items-center gap-2"
-    >
+  <footer class="w-full h-full bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 flex items-center justify-center">
+    <div class="max-w-7xl mx-auto px-6 text-sm flex flex-col md:flex-row justify-between items-center gap-2 w-full">
       <div>© FinancialAI — Built for modern finance teams.</div>
       <div v-if="weatherInfo === ''">
         {{ currentDateTime }}
