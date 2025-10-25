@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="bg-gray-50 dark:bg-gray-900 h-full flex flex-col justify-center">
+  <section id="contact" class="bg-gray-50 dark:bg-gray-900 flex flex-col justify-center">
     <div class="max-w-5xl mx-auto px-6 md:px-12">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
         Get in Touch
