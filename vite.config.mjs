@@ -3,5 +3,5 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
-  base: '/' // <- crucial for GitHub Pages
+  base: '/FinancialAI-Website/' // <- crucial for GitHub Pages
 })
