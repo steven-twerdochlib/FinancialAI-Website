@@ -4,11 +4,11 @@
     <Navbar :darkMode="darkMode" @toggleDarkMode="toggleDarkMode" class="sticky top-0 z-50 h-[5vh]" />
 
     <!-- Hero Section fills remaining space -->
-    <HeroSection class="h-[90vh]" />
+    <HeroSection class="h-[93vh]" />
 
-    <Contact class="h-[90vh]"></Contact>
+    <Contact class="h-[93vh]"></Contact>
     <!-- Footer -->
-    <Footer class="sticky bottom-0 h-[5vh]" />
+    <Footer class="sticky bottom-0 h-[7vh]" />
   </div>
 </template>
 
