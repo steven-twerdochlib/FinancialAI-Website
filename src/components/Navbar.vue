@@ -3,12 +3,14 @@
     <nav class="backdrop-blur-sm bg-white/60 dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800">
       <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         <div class="flex items-center gap-3">
-          <div class="font-semibold text-lg">Financial<span class="text-cyan-500">AI</span></div>
+          <a href="#" class="font-semibold text-lg cursor-pointer">Financial<span class="text-cyan-500">AI</span></a>
           <ul class="hidden md:flex items-center gap-6 text-sm text-gray-700 dark:text-gray-200">
             <li class="hover:underline cursor-pointer">Our Product</li>
             <li class="hover:underline cursor-pointer">Benefits</li>
             <li class="hover:underline cursor-pointer">About Us</li>
-            <li class="hover:underline cursor-pointer">Contact</li>
+            <li>
+              <a href="#contact" class="hover:underline cursor-pointer">Contact</a>
+            </li>
           </ul>
         </div>
 
@@ -41,6 +43,8 @@ export default {
 }
 </script>
 
-<style scoped>
-/* tiny adjustments */
+<style>
+html {
+  scroll-behavior: smooth;
+}
 </style>

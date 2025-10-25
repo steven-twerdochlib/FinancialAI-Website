@@ -21,8 +21,12 @@
       </p>
 
       <div class="mt-8 flex gap-4">
-        <button class="px-6 py-3 rounded-lg bg-cyan-600 text-white font-medium">See Product</button>
-        <button class="px-6 py-3 rounded-lg border dark:border-gray-700">Request A Demo</button>
+        <button class="px-6 py-3 rounded-lg bg-cyan-600 text-white font-medium hover:bg-cyan-700 transition-colors duration-200">
+          See Product
+        </button>
+        <button @click="scrollToContact" class="px-6 py-3 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200">
+          Request A Demo
+        </button>
       </div>
     </div>
   </section>
@@ -32,6 +36,14 @@
 <script>
 export default {
   name: 'HeroSection',
+  methods: {
+    scrollToContact() {
+      const contactSection = document.getElementById('contact')
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  }
 }
 </script>
 
