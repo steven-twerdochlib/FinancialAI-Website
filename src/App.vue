@@ -4,7 +4,7 @@
     <Navbar :darkMode="darkMode" @toggleDarkMode="toggleDarkMode" class="sticky top-0 z-50 h-[7vh]" />
 
     <!-- Hero Section fills remaining space -->
-    <HeroSection class="h-[93vh]" />
+    <HeroSection id="hero" class="h-[93vh]" />
 
     <Contact class="h-[93vh]"></Contact>
     <!-- Footer -->
