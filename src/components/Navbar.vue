@@ -20,7 +20,7 @@
 >
   <li @click.prevent="scrollTo('#contact')" class="hover:underline cursor-pointer">Our Product</li>
   <li @click.prevent="scrollTo('#contact')" class="hover:underline cursor-pointer">Benefits</li>
-  <li @click.prevent="scrollTo('#contact')" class="hover:underline cursor-pointer">About Us</li>
+  <li @click.prevent="scrollTo('#AboutUs')" class="hover:underline cursor-pointer">About Us</li>
   <li @click.prevent="scrollTo('#contact')" class="hover:underline cursor-pointer"><a href="#contact">Contact</a></li>
 </ul>
 
@@ -74,12 +74,20 @@ export default {
       this.mobileOpen = false
     },
     scrollTo(selector) {
-      const el = document.querySelector(selector)
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' })
-      }
-      this.closeMobileMenu()
-    }
+  const el = document.querySelector(selector);
+  if (el) {
+    // Get element's top position relative to the document
+    const top = el.getBoundingClientRect().top + window.pageYOffset;
+
+    // Scroll to slightly above the element (offset in pixels)
+    const offset = 65; // adjust this value as needed
+    window.scrollTo({
+      top: top - offset,
+      behavior: 'smooth'
+    });
+  }
+  this.closeMobileMenu();
+}
   }
 }
 </script>

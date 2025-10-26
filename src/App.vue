@@ -2,12 +2,9 @@
   <div :class="themeClass" class="min-h-screen flex flex-col transition-colors duration-300">
     <!-- Sticky Navbar -->
     <Navbar :darkMode="darkMode" @toggleDarkMode="toggleDarkMode" class="sticky top-0 z-50 h-[7vh]" />
-
-    <!-- Hero Section fills remaining space -->
     <HeroSection id="hero" class="h-[93vh]" />
-
+    <AboutUs id="AboutUs" class="h-[93vh]" />
     <Contact class="h-[93vh]"></Contact>
-    <!-- Footer -->
     <Footer class="sticky bottom-0 h-[7vh]" />
   </div>
 </template>
@@ -17,12 +14,14 @@ import Navbar from './components/Navbar.vue'
 import HeroSection from './components/HeroSection.vue'
 import Footer from './components/Footer.vue'
 import Contact from './components/Contact.vue'
+import AboutUs from './components/AboutUs.vue'
 
 export default {
   name: 'App',
   components: {
     Navbar,
     HeroSection,
+    AboutUs,
     Footer,
     Contact
   },
