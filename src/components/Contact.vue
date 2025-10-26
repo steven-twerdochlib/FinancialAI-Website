@@ -112,13 +112,26 @@ export default {
     }
   },
   methods: {
+    sanitizeInput(input) {
+      const div = document.createElement('div')
+      div.textContent = input
+      return div.innerHTML.trim()
+    },
     async handleSubmit() {
       try {
         const serviceID = import.meta.env.VITE_SERVICE_ID
         const templateID = import.meta.env.VITE_TEMPLATE_ID
         const publicKey = import.meta.env.VITE_PUBLIC_KEY
 
-        await emailjs.send(serviceID, templateID, this.form, publicKey)
+        // ✅ sanitize all user fields before sending
+        const sanitizedData = {
+          name: this.sanitizeInput(this.form.name),
+          email: this.sanitizeInput(this.form.email),
+          message: this.sanitizeInput(this.form.message)
+        }
+
+        await emailjs.send(serviceID, templateID, sanitizedData, publicKey)
+
         this.submitted = true
         this.form = { name: '', email: '', message: '' }
         setTimeout(() => (this.submitted = false), 5000)
@@ -127,13 +140,13 @@ export default {
       }
     },
     openLinkedIn() {
-      const linkedIn = import.meta.env.VITE_LINKEDIN_ADDRESS;
-      window.open(linkedIn, "_blank");
+      const linkedIn = import.meta.env.VITE_LINKEDIN_ADDRESS
+      window.open(linkedIn, "_blank")
     },
     openEmail() {
-      const email = import.meta.env.VITE_CONTACT_EMAIL;
-      const url = `https://mail.google.com/mail/?view=cm&to=${email}`;
-      window.open(url, "_blank");
+      const email = import.meta.env.VITE_CONTACT_EMAIL
+      const url = `https://mail.google.com/mail/?view=cm&to=${email}`
+      window.open(url, "_blank")
     }
   }
 }

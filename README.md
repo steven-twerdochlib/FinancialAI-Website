@@ -1,11 +1,6 @@
-# FinancialAI Vue Starter
+# FinancialAI Vue
 
-A minimal Vue 3 + Vite + Tailwind starter configured with:
-
-- Hero background (blurred, angled spreadsheet image)
-- Light + Dark mode toggle
-- Navbar, Hero, Footer components
-- Tailwind CSS preconfigured
+A Vue 3 project designed to promote FinancialAI company, team and products.
 
 ## Quick start
 
@@ -19,9 +14,9 @@ npm install
 npm run dev
 ```
 
-3. Build for production
+3. Build and release for production
 ```bash
-npm run build
+npm run deploy
 ```
 
 The hero image used is included at `src/assets/hero-spreadsheet.png`.
