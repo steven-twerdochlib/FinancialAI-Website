@@ -47,7 +47,7 @@
       >
         <a href="#" @click.prevent="scrollTo('#contact')" class="py-2 w-full hover:underline" @click="closeMobileMenu">Our Product</a>
         <a href="#" @click.prevent="scrollTo('#contact')" class="py-2 w-full hover:underline" @click="closeMobileMenu">Benefits</a>
-        <a href="#" @click.prevent="scrollTo('#contact')" class="py-2 w-full hover:underline" @click="closeMobileMenu">About Us</a>
+        <a href="#" @click.prevent="scrollTo('#AboutUs')" class="py-2 w-full hover:underline" @click="closeMobileMenu">About Us</a>
         <a href="#contact" @click.prevent="scrollTo('#contact')" class="py-2 w-full hover:underline" @click="closeMobileMenu">Contact</a>
       </div>
     </transition>
