@@ -1,19 +1,24 @@
 <template>
-  <section id="contact" class="bg-gray-50 dark:bg-gray-900 flex flex-col justify-center">
-    <div class="max-w-5xl mx-auto px-6 md:px-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
-        Get in Touch
-      </h2>
+  <section
+  id="contact"
+  class="h-full bg-gray-50 dark:bg-gray-900 flex flex-col justify-center overflow-hidden"
+>
+    <div
+  class="flex-1 overflow-auto max-w-5xl mx-auto px-4 sm:px-8 md:px-12 py-8 md:py-12"
+>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-10">
+  Get in Touch
+</h2>
 
-      <p class="text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
-        Have a question, want a demo, or want to learn how FinancialAI can transform your financial workflows?  
-        Send us a message — we’ll get back to you soon.
-      </p>
+<p class="text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8 sm:mb-12 text-sm sm:text-base md:text-lg">
+  Have a question, want a demo, or want to learn how FinancialAI can transform your financial workflows?  
+  Send us a message — we’ll get back to you soon.
+</p>
 
       <form
-        @submit.prevent="handleSubmit"
-        class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-8 md:p-10 space-y-6"
-      >
+  @submit.prevent="handleSubmit"
+  class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 sm:p-8 md:p-10 space-y-4 sm:space-y-6 flex-1 overflow-auto"
+>
         <div class="grid md:grid-cols-2 gap-6">
           <div>
             <label for="name" class="block mb-2 font-medium">Name</label>
@@ -64,7 +69,7 @@
       </form>
 
       <!-- Social Links -->
-      <div class="flex justify-center mt-10 space-x-8">
+      <div class="flex flex-wrap justify-center mt-6 sm:mt-10 space-x-6 sm:space-x-8">
         <!-- LinkedIn -->
         <button
           @click="openLinkedIn"

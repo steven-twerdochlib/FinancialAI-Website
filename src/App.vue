@@ -1,7 +1,7 @@
 <template>
   <div :class="themeClass" class="min-h-screen flex flex-col transition-colors duration-300">
     <!-- Sticky Navbar -->
-    <Navbar :darkMode="darkMode" @toggleDarkMode="toggleDarkMode" class="sticky top-0 z-50 h-[5vh]" />
+    <Navbar :darkMode="darkMode" @toggleDarkMode="toggleDarkMode" class="sticky top-0 z-50 h-[7vh]" />
 
     <!-- Hero Section fills remaining space -->
     <HeroSection class="h-[93vh]" />

@@ -1,5 +1,5 @@
 <template>
-  <section class="relative flex items-center">
+  <section v-bind="$attrs" class="relative flex items-center justify-start overflow-hidden">
     <!-- Background image -->
     <div class="absolute inset-0 overflow-hidden">
       <img
@@ -12,19 +12,26 @@
     </div>
 
     <!-- Hero content -->
-    <div class="relative z-10 max-w-3xl pl-10 md:pl-20">
-      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+    <div class="relative z-10 max-w-[80vw] pl-[6vw] space-y-[2vh]">
+      <h1 class="font-extrabold leading-tight text-[5vh] md:text-[6vh]">
         Empowering Finance with AI
       </h1>
-      <p class="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-xl">
-        Transform your customer service with our Smart AI Assistance Chatbot. Let our AI handle invoice queries, payments, and disputes — so your team can focus on what matters.
+      <p class="text-[2.3vh] text-gray-600 dark:text-gray-300 max-w-[60vw] leading-relaxed">
+        Transform your customer service with our Smart AI Assistance Chatbot.
+        Let our AI handle invoice queries, payments, and disputes — so your team
+        can focus on what matters.
       </p>
 
-      <div class="mt-8 flex gap-4">
-        <button class="px-6 py-3 rounded-lg bg-cyan-600 text-white font-medium hover:bg-cyan-700 transition-colors duration-200">
+      <div class="flex gap-[2vw] pt-[2vh]">
+        <button
+          class="px-[3vw] py-[1.5vh] rounded-[1vh] bg-cyan-600 text-white font-medium text-[2vh] hover:bg-cyan-700 transition-colors duration-200"
+        >
           See Product
         </button>
-        <button @click="scrollToContact" class="px-6 py-3 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200">
+        <button
+          @click="scrollToContact"
+          class="px-[3vw] py-[1.5vh] rounded-[1vh] bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white font-medium text-[2vh] hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
+        >
           Request A Demo
         </button>
       </div>
@@ -32,20 +39,19 @@
   </section>
 </template>
 
-
 <script>
 export default {
-  name: 'HeroSection',
+  name: "HeroSection",
+  inheritAttrs: false,
   methods: {
     scrollToContact() {
-      const contactSection = document.getElementById('contact')
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth' })
-      }
-    }
-  }
-}
+      const contact = document.querySelector("#contact");
+      if (contact) contact.scrollIntoView({ behavior: "smooth" });
+    },
+  },
+};
 </script>
+
 
 <style scoped>
 /* Ensure text remains readable on smaller screens */
